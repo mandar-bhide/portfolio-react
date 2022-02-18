@@ -1,6 +1,7 @@
 import './TopBar.css'
 import { navitems } from '../navigation'
-import { Dispatch, SetStateAction, useState } from 'react'
+import { useState } from 'react'
+import $ from 'jquery'
 
 export default function TopBar(){
     const [activeTab,setActiveTab] = useState(0)
@@ -8,24 +9,16 @@ export default function TopBar(){
     return <div id="intro">
         {
             navitems.map(function(el,index){
-                return <NavItem 
-                    name={el["name"]} 
-                    url={el["url"]} 
-                    isActive={index===activeTab} 
-                    onclick={setActiveTab}
-                    index={index}
-                    key={el["name"]}
-                />
+                return <p 
+                    className={activeTab===index?'navitem active':'navitem'} 
+                    onClick={()=>{
+                        setActiveTab(index)
+                        $('html,body').animate({scrollTop: $(el.url).offset()!.top},'smooth');
+                    }}
+                >
+                    {el.name}
+                </p>
             })
         }
     </div>
-}
-
-function NavItem(
-    {name,url,isActive=false,onclick,index}:
-    {name:String,url:string,isActive?:boolean,onclick:Dispatch<SetStateAction<number>>,index:number}
-):JSX.Element{    
-    return <a href={url.toString()} className={isActive?'navitem active':'navitem'} onClick={()=>onclick(index)}>
-        {name}
-    </a>
 }

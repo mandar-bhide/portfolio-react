@@ -2,7 +2,6 @@ import './Blogs.css'
 import { blogs } from '../assets/blogs'
 
 export default function Blogs(){
-
     return <section id='blogs'>
         <div className="blog-title">
             <h2 className='blog-area-title'>I Write Here</h2>
@@ -40,7 +39,7 @@ function BlogBox(
         <div className="blog-content">
             <h6 className="blog-content-date">{blog.date}</h6>
             <div style={{height:'4px'}}>&nbsp;</div>
-            <h3 className="blog-content-title">{blog.title}</h3>
+            <h4 className="blog-content-title">{blog.title}</h4>
             <div style={{height:'10px'}}>&nbsp;</div>
             <h6 className="blog-content-subtitle">{blog.subtitle}</h6>
             <a href={blog.link} target='_blank' rel="noreferrer" className="read-blog">

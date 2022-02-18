@@ -145,7 +145,6 @@
     box-shadow: 0 4px 45px rgba(14,36,49,.15);
 }
 
-
 @media (pointer:none), (pointer:coarse) {
     .work-area{
         grid-template-columns:1fr;

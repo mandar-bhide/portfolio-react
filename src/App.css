@@ -96,6 +96,7 @@
     backdrop-filter: blur(10px);
     bottom:10px;right:10px;
     width:50px;height:50px;
+    border:none;
     border-radius:50%;
     color:var(--text-color);
     display:flex;align-items:center;justify-content:center;

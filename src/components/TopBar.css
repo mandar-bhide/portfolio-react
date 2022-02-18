@@ -17,6 +17,7 @@
     color:var(--text-color);
     transition:250ms ease-in-out;
     animation: navitem 500ms linear 0ms 1 forwards;
+    cursor:pointer;
 }
 
 .navitem:hover{
@@ -52,6 +53,6 @@
 
 @media (pointer:none), (pointer:coarse) {
     .navitem{
-        margin:1em 1em;
+        margin:1em 0.7em;
     }
 }

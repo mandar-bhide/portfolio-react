@@ -4,6 +4,10 @@ export const links = [
         url:"https://www.instagram.com/story_teller_wordpress/"
     },
     {
+        name:"Project enTWEAK",
+        url:"https://www.instagram.com/entweak/"
+    },
+    {
         name:"Previous Version",
         url:"https://mandarbhide-v1.web.app/"
     },

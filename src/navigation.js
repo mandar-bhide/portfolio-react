@@ -2,7 +2,7 @@ import './App.css';
 export var navitems = [
     {
         name:"Home",
-        url:"#intro-1"
+        url:"#intro"
     },
     {
         name:"Skills",

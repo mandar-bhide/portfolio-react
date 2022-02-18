@@ -26,7 +26,7 @@ function App() {
       <Blogs/>
       <Footer/>
       {
-        offset>80?<a href="#intro" onClick={()=>setOffset(0)} className="to-top"><i className='bx bx-up-arrow' ></i></a>:<div></div>
+        offset>80?<button onClick={()=>setOffset(0)} className="to-top"><i className='bx bx-up-arrow' ></i></button>:<div></div>
       }
     </div>
   );

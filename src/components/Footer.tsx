@@ -1,7 +1,8 @@
 import './Footer.css'
+import { links } from '../assets/footerlinks'
+import { social } from '../assets/social'
 
 export default function Footer(){
-
     const contacts = [
         {
             text:"WhatsApp",
@@ -24,6 +25,22 @@ export default function Footer(){
                     return <a href={el.link} target='_blank'rel="noreferrer" className="connect-link">
                         {el.icon}
                         <p className='contact-text'>{el.text}</p>
+                    </a>
+                })
+            }
+        </div>
+        <div className="footer-links">
+            {
+                links.map((el)=>{
+                    return <a className='footer-link' target='_blank' rel='noreferrer' href={el.url} key={el.name}>{el.name}</a>
+                })
+            }
+        </div>
+        <div className='mobile-social'>
+            {
+                social.map(function(el){
+                    return <a href={el["url"]} className='mobile-social-icon' target="_blank" rel="noreferrer" key={el["name"]}>
+                        {el["icon"]}
                     </a>
                 })
             }

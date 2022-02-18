@@ -1,7 +1,6 @@
 import './Skills.css'
 
 export default function Skills(){
-
     var languages = [["C/C++","Java","Kotlin","Dart"],["Typescript","Python","Lua"],["Flutter","ReactJS","Flask"],["NodeJS","ElectronJS"]]
     var other = [["Databases","Google Cloud"],["Image Processing","Machine Learning"],["Data Analytics"]]
     var tools = [["Git/Github","Android Studio","Figma"],["Postman","MS Office"]]

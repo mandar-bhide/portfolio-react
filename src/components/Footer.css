@@ -48,6 +48,30 @@
     margin-top:5rem;
 }
 
-@media (pointer:none), (pointer:coarse) {
+.footer-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:3rem;
+}
 
+.footer-link{
+    color:white;
+    text-decoration:none;
+    margin:1rem;
+    letter-spacing:1px;
+}
+.footer-link:hover{
+    color:var(--primary-color);
+    transition:600ms ease-in;
+}
+
+.mobile-social-icon{
+    margin:1rem;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    .footer-links{
+        flex-direction:column;
+    }
 }
