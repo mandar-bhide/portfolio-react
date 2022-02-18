@@ -10,6 +10,7 @@ export default function TopBar(){
         {
             navitems.map(function(el,index){
                 return <p 
+                    key={el.name}
                     className={activeTab===index?'navitem active':'navitem'} 
                     onClick={()=>{
                         setActiveTab(index)

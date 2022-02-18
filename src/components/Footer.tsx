@@ -22,7 +22,7 @@ export default function Footer(){
         <div className="contact-row">
             {
                 contacts.map((el)=>{
-                    return <a href={el.link} target='_blank'rel="noreferrer" className="connect-link">
+                    return <a href={el.link} key={el.text} target='_blank'rel="noreferrer" className="connect-link">
                         {el.icon}
                         <p className='contact-text'>{el.text}</p>
                     </a>
