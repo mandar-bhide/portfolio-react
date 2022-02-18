@@ -1,0 +1,23 @@
+import './App.css';
+export var navitems = [
+    {
+        name:"Home",
+        url:"#intro-1"
+    },
+    {
+        name:"Skills",
+        url:"#skills"
+    },
+    {
+        name:"Work",
+        url:"#work"
+    },
+    {
+        name:"Blogs",
+        url:"#blogs"
+    },
+    {
+        name:"Contact",
+        url:"#footer"
+    },
+]
