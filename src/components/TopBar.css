@@ -53,6 +53,10 @@
 
 @media (pointer:none), (pointer:coarse) {
     .navitem{
-        margin:1em 0.7em;
+        margin:3vh 3vw;
+        font-size:0.8em;
+    }
+    .navitem:after{
+        display:none;
     }
 }

@@ -7,6 +7,8 @@ import Blogs from './components/Blogs';
 import { useEffect, useState } from 'react';
 import { social } from './assets/social'
 import Footer from './components/Footer';
+import $ from 'jquery'
+import linkClick from './components/TrackedLink';
 
 function App() {
   const [offset, setOffset] = useState(0);
@@ -26,7 +28,10 @@ function App() {
       <Blogs/>
       <Footer/>
       {
-        offset>80?<button onClick={()=>setOffset(0)} className="to-top"><i className='bx bx-up-arrow' ></i></button>:<div></div>
+        offset>80?<button style={{cursor:'pointer'}} onClick={()=>{
+          setOffset(0)
+          $('html,body').animate({scrollTop: $('#intro').offset()!.top},'smooth');
+        }} className="to-top"><i className='bx bx-up-arrow' ></i></button>:<div></div>
       }
     </div>
   );
@@ -44,7 +49,7 @@ function Social(){
     <div style={{flex:1}}></div>
     {
       social.map(function(el){
-        return <a href={el["url"]} target="_blank" rel="noreferrer" key={el["name"]}>
+        return <a href={el["url"]} onClick={(event)=>{event.preventDefault();linkClick({link:el.url,isProfile:true,profileName:el.name});}} rel="noreferrer" key={el["name"]}>
           {el["icon"]}
         </a>
       })

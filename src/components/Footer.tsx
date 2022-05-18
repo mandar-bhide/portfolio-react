@@ -1,6 +1,7 @@
 import './Footer.css'
 import { links } from '../assets/footerlinks'
 import { social } from '../assets/social'
+import linkClick from './TrackedLink'
 
 export default function Footer(){
     const contacts = [
@@ -22,7 +23,7 @@ export default function Footer(){
         <div className="contact-row">
             {
                 contacts.map((el)=>{
-                    return <a href={el.link} key={el.text} target='_blank'rel="noreferrer" className="connect-link">
+                    return <a href={el.link} key={el.text} onClick={(event)=>{event.preventDefault();linkClick({link:el.link,isProfile:true,profileName:el.text});}}rel="noreferrer" className="connect-link">
                         {el.icon}
                         <p className='contact-text'>{el.text}</p>
                     </a>
@@ -32,14 +33,14 @@ export default function Footer(){
         <div className="footer-links">
             {
                 links.map((el)=>{
-                    return <a className='footer-link' target='_blank' rel='noreferrer' href={el.url} key={el.name}>{el.name}</a>
+                    return <a className='footer-link' onClick={(event)=>{event.preventDefault();linkClick({link:el.url,isProfile:false});}} rel='noreferrer' href={el.url} key={el.name}>{el.name}</a>
                 })
             }
         </div>
         <div className='mobile-social'>
             {
                 social.map(function(el){
-                    return <a href={el["url"]} className='mobile-social-icon' target="_blank" rel="noreferrer" key={el["name"]}>
+                    return <a href={el["url"]} onClick={(event)=>{event.preventDefault();linkClick({link:el.url,isProfile:true,profileName:el.name});}} className='mobile-social-icon' target="_blank" rel="noreferrer" key={el["name"]}>
                         {el["icon"]}
                     </a>
                 })

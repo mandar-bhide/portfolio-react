@@ -1,5 +1,6 @@
 import './Work.css'
 import { projects } from '../assets/projects'
+import linkClick from './TrackedLink'
 
 export default function Work(){
     return <section id="work">
@@ -26,7 +27,9 @@ function WorkBox(
     const link = require("../assets/"+element.image)
     return <div className='workbox'>
         <div className='work-image-holder'>
-            {element.codeLink!=="In Progress"?<a href={element.codeLink} rel="noreferrer" target='_blank' className="git-link"><i className='bx bx-link-alt'></i></a>:<p className="in-progress">In Progress</p>}
+            {element.codeLink!=="In Progress"?
+                <a href={element.codeLink} onClick={(event)=>{event.preventDefault();linkClick({link:element.codeLink,isProfile:false});}} rel="noreferrer" className="git-link"><i className='bx bx-link-alt'></i></a>:
+                <p className="in-progress">In Progress</p>}
             <img src={link} loading='lazy' alt={element.title} className='work-image'/>
             <p className="work-type">{element.type}</p>
         </div>

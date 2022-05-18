@@ -5,7 +5,6 @@ import $ from 'jquery'
 
 export default function TopBar(){
     const [activeTab,setActiveTab] = useState(0)
-
     return <div id="intro">
         {
             navitems.map(function(el,index){
