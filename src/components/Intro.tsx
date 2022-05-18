@@ -2,6 +2,7 @@ import me from '../assets/me.jpg'
 import { social } from '../assets/social'
 import './Intro.css'
 import resume from '../assets/Mandar_Bhide.pdf'
+import linkClick from './TrackedLink'
 
 export default function Intro(){
     return <section id="intro-1">
@@ -24,7 +25,7 @@ export default function Intro(){
             <div className='intro-buttons'>
                 <a href="#work" style={{marginTop:'1rem'}} className="read-all">Checkout My Projects</a>
                 <span style={{width:'10px',height:'10px'}}>&nbsp;</span>
-                <a href={resume} target='_blank' rel='noopener noreferrer' style={{marginTop:'1rem'}} className="read-all">View Resume</a>
+                <a href={resume} onClick={(event)=>{event.preventDefault();linkClick({link:resume,isProfile:true,profileName:'resume'});}} rel='noopener noreferrer' style={{marginTop:'1rem'}} className="read-all">View Resume</a>
             </div>
         </div>
         <div className="image-holder">
