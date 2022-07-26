@@ -1,5 +1,15 @@
 export const blogs = [
     {
+        title:"Built From Scratch",
+        subtitle:"Server-side Framework",
+        imageLink:"https://miro.medium.com/max/1050/1*HIxFbnlg7MnM0sh2JR7tEw.png",
+        imageBgColor:"#D6D6D6",
+        date:"Jul 25, 2022",
+        link:"https://medium.com/p/40479a6a6fa8",
+        time:"3 min read",
+        tag:"Dart server"
+    },
+    {
         title:"I Love Errors!",
         subtitle:"I just choose to avoid them…",
         imageLink:"https://miro.medium.com/max/1400/1*3niKiwzMUpZBqZKRATjApw.jpeg",
@@ -28,16 +38,6 @@ export const blogs = [
         link:"https://medium.com/p/5678252366bf",
         time:"3 min read",
         tag:"JavaScript"
-    },
-    {
-        title:"Sending email programmatically in python",
-        subtitle:"",
-        imageLink:"https://miro.medium.com/max/1400/1*V9RNdQj4q3ihRbLvM7ANog.jpeg",
-        imageBgColor:"#FFFFFF",
-        date:"July 25, 2020",
-        link:"https://medium.com/p/11041596ecc3",
-        time:"3 min read",
-        tag:"Python"
-    },
+    }
 ]
 
