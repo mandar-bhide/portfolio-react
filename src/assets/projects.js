@@ -1,10 +1,10 @@
 export const projects = [
     {
-        title:"Web Microframework",
-        image:"backend.jpg",
+        title:"Web Framework",
+        image:"qdot.jpg",
         description:"A backend microframework written in Dart language.",
         technologies:["Dart"],
-        codeLink:"In Progress",
+        codeLink:"https://pub.dev/packages/qdot",
         type:"Personal Project"
     },
     {
