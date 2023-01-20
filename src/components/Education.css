@@ -1,0 +1,82 @@
+#education{
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    width:100%;
+    padding-top:4em;
+    padding-bottom:6rem;
+    padding-inline:10rem;
+    position:relative;
+}
+
+.ed-area{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:67%;
+}
+
+.vline{
+    width:3px;
+    margin-inline-end:10px;
+    background-color:var(--primary-color);
+}
+
+.ed-box{
+    margin:1em;
+    padding:1em;
+    display:flex;
+    height:100px;
+}
+
+.ed-text{
+    margin-top:20px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.ed-text>p{
+    font-size:0.8em;
+}
+
+.ed-area-title{
+    font-weight:400;
+    margin-bottom:2rem;
+    padding:10px;
+}
+
+.ed-area-title:after{
+    content:' ';
+    display:inline-block;
+    width:30%;
+    height:2px;
+    background-color:var(--primary-color);
+}
+
+.ed-degree{
+    margin-bottom:10px;
+}
+
+.ed-fromto{
+    margin-top:10px;
+}
+
+.ed-grade{
+    margin-top:10px;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    #education{
+        width:unset;
+        padding-inline:15px;
+    }
+    .ed-area{
+        flex-direction:column;
+        align-items:start;
+        width:100%;
+    }
+}

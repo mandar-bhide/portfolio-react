@@ -19,13 +19,13 @@ export default function Intro(){
                 }
                 </div>
                 <span style={{minHeight:'1em'}}>&nbsp;</span> <br/>
-                <span className='im'>Computer Engineer | Full-stack Developer</span>
+                <span className='im'>Computer Engineer | CMA</span>
             </div>
-            Exploring the world of computers and development since 2017 <br/>
+            Learning accounting and management for informed business decisions. <br/>
             <div className='intro-buttons'>
-                <a href="#work" style={{marginTop:'1rem'}} className="read-all">Checkout My Projects</a>
+                <a href="#work" style={{marginTop:'1rem'}} className="read-all">Engineering Projects</a>
                 <span style={{width:'10px',height:'10px'}}>&nbsp;</span>
-                <a href={resume} onClick={(event)=>{event.preventDefault();linkClick({link:resume,isProfile:true,profileName:'resume'});}} rel='noopener noreferrer' style={{marginTop:'1rem'}} className="read-all">View Resume</a>
+                <a href={resume} rel='noopener noreferrer' style={{marginTop:'1rem'}} className="read-all">View Resume</a>
             </div>
         </div>
         <div className="image-holder">

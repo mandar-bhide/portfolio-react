@@ -4,7 +4,11 @@ import linkClick from './TrackedLink'
 
 export default function Work(){
     return <section id="work">
-        <h2 className='work-area-title'>Top Projects</h2>
+        <div className="blog-title">
+            <h2 className='blog-area-title'>Top Projects</h2>
+            <div style={{flexGrow:1}}>&nbsp;</div>
+            <a href="https://github.com/mdb2301?tab=repositories" target='_blank'rel="noreferrer" className="read-all">View All</a>
+        </div>
         <div className="work-area">
             {projects.map((el)=><WorkBox element={el} key={el.title}/>)}
         </div>

@@ -4,6 +4,7 @@ import Intro from './components/Intro';
 import TopBar from './components/TopBar'
 import Work from './components/Work';
 import Blogs from './components/Blogs';
+import Education from './components/Education';
 import { useEffect, useState } from 'react';
 import { social } from './assets/social'
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ function App() {
       <TopBar/>
       <Social/>
       <Intro/>
+      <Education/>
       <Skills/>
       <Work/>
       <Blogs/>

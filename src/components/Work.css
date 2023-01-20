@@ -146,6 +146,9 @@
 }
 
 @media (pointer:none), (pointer:coarse) {
+    #work{
+        padding:30px;
+    }
     .work-area{
         grid-template-columns:1fr;
     }

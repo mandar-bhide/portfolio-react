@@ -1,6 +1,10 @@
 import axios from "axios";
 
 export default function linkClick({link,isProfile,profileName}:{link:string,isProfile:boolean,profileName?:string}){
+    
+}
+
+function click({link,isProfile,profileName}:{link:string,isProfile:boolean,profileName?:string}){
     const platform = navigator.userAgent
     const key = '3T$Np5ryi#yDQyJTC3aSy!:?32np6aExQ%pXBnpxgENQP&yeVGviGB'
     window.open(link,'_blank')?.focus()
