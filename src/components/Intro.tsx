@@ -2,7 +2,7 @@ import me from '../assets/me.jpg'
 import { social } from '../assets/social'
 import './Intro.css'
 import resume from '../assets/Mandar_Bhide.pdf'
-import linkClick from './TrackedLink'
+import introimg from '../assets/intro-bg.jpg'
 
 export default function Intro(){
     return <section id="intro-1">
@@ -21,11 +21,10 @@ export default function Intro(){
                 <span style={{minHeight:'1em'}}>&nbsp;</span> <br/>
                 <span className='im'>Computer Engineer | CMA</span>
             </div>
-            Learning accounting and management for informed business decisions. <br/>
             <div className='intro-buttons'>
                 <a href="#work" style={{marginTop:'1rem'}} className="read-all">Engineering Projects</a>
                 <span style={{width:'10px',height:'10px'}}>&nbsp;</span>
-                <a href={resume} rel='noopener noreferrer' style={{marginTop:'1rem'}} className="read-all">View Resume</a>
+                <a href={resume} target='_blank' rel='noopener noreferrer' style={{marginTop:'1rem'}} className="read-all">View Resume</a>
             </div>
         </div>
         <div className="image-holder">

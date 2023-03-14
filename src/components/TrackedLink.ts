@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default function linkClick({link,isProfile,profileName}:{link:string,isProfile:boolean,profileName?:string}){
-    
+    window.open(link,'_blank')?.focus()
 }
 
 function click({link,isProfile,profileName}:{link:string,isProfile:boolean,profileName?:string}){
