@@ -1,9 +1,9 @@
 export const education = [
     {
-        degree:"CMA (Formerly ICWA)",
+        degree:"Cost & Management Accountant",
         uni:"Institute of Cost and Management Accountants of India",
         fromto:"2022-PRESENT",
-        grade:""
+        grade:"Appearing INTER both groups"
     },
     {
         degree:"BE (Computer Engineering)",

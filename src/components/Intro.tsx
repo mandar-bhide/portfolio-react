@@ -1,7 +1,7 @@
 import me from '../assets/me.jpg'
 import { social } from '../assets/social'
 import './Intro.css'
-import resume from '../assets/Mandar_Bhide.pdf'
+import resume from '../assets/MandarBhide.pdf'
 import introimg from '../assets/intro-bg.jpg'
 
 export default function Intro(){
