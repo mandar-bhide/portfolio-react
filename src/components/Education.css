@@ -13,6 +13,7 @@
 
 .ed-area{
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
     width:67%;
@@ -29,6 +30,7 @@
     padding:1em;
     display:flex;
     height:100px;
+    width:78%;
 }
 
 .ed-text{
@@ -75,8 +77,6 @@
         padding-inline:15px;
     }
     .ed-area{
-        flex-direction:column;
-        align-items:start;
         width:100%;
     }
 }

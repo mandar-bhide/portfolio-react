@@ -1,11 +1,11 @@
 export const projects = [
     {
-        title:"Web Framework",
-        image:"qdot.jpg",
-        description:"A backend microframework written in Dart language.",
-        technologies:["Dart"],
-        codeLink:"https://pub.dev/packages/qdot",
-        type:"Personal Project"
+        title:"Audit Challenge",
+        image:"audit.jpg",
+        description:"5th position in Grant Thornton audit challenge 2023",
+        technologies:["Auditing","Compliance"],
+        codeLink:"https://docs.google.com/document/d/1_jE9AkhskUXKYpJR-ETrg7h1TKfIZOtcnC8gmKQbkEI/edit",
+        type:"Competition"
     },
     {
         title:"Stock price prediction",
@@ -16,11 +16,11 @@ export const projects = [
         type:"Final Year Project"
     },
     {
-        title:"Book Exchange App",
-        image:"comex.png",
-        description:"A cross-platform mobile application allowing users to initiate and complete book exchanges for in-app coins.",
-        technologies:["Flutter","Flask","Google Cloud"],
-        codeLink:"https://github.com/mdb2301/comex",
-        type:"Freelance Project"
+        title:"Web Framework",
+        image:"qdot.jpg",
+        description:"A backend microframework written in Dart language.",
+        technologies:["Dart"],
+        codeLink:"https://pub.dev/packages/qdot",
+        type:"Personal Project"
     }
 ]

@@ -1,9 +1,15 @@
 export const education = [
     {
-        degree:"Cost & Management Accountant",
+        degree:"CMA Final",
         uni:"Institute of Cost and Management Accountants of India",
-        fromto:"2022-PRESENT",
-        grade:"Appearing INTER both groups"
+        fromto:"2023-PRESENT",
+        grade:"N/A"
+    },
+    {
+        degree:"CMA Intermediate",
+        uni:"Institute of Cost and Management Accountants of India",
+        fromto:"2022-2023",
+        grade:"Gr I:219, Gr II: 201"
     },
     {
         degree:"BE (Computer Engineering)",
