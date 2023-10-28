@@ -1,19 +1,24 @@
 import me from '../assets/me.jpg'
-import { social } from '../assets/social'
 import './Intro.css'
-import resume from '../assets/MandarBhide.pdf'
-import introimg from '../assets/intro-bg.jpg'
+import { SocialData } from '../custom-types'
+import { useEffect, useState } from 'react'
+import { getResumeUrl } from '../firebase';
 
-export default function Intro(){
+export default function Intro({data}:{data:SocialData[]}){
+    const [resume,setResume] = useState("");
+    useEffect(()=>{
+        getResumeUrl().then((val)=>setResume(val));
+        console.log(resume);
+    },[])
     return <section id="intro-1">
         <div className="column" style={{color:'var(--secondary-text-color)'}}>
             <div style={{marginBottom:'2em'}}>
                 <span style={{fontSize:'2.2em',fontWeight:400,color:'var(--text-color)'}}>Mandar Bhide</span> <br/>
                 <div className='mobile-social'>
                 {
-                    social.map(function(el){
-                        return <a href={el["url"]} target="_blank" rel="noreferrer" key={el["name"]}>
-                            {el["icon"]}
+                    data.map(function(el){
+                        return <a href={el.url} target="_blank" rel="noreferrer" key={el.name}>
+                            <i className={el.icon}></i>
                         </a>
                     })
                 }

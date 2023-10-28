@@ -1,7 +1,21 @@
+import { useEffect, useState } from 'react';
+import { BlogData } from '../custom-types';
 import './Blogs.css'
-import { blogs } from '../assets/blogs'
+import { getData } from '../firebase';
+
+async function loadBlogs(){
+    let blogs = (await getData("blogs")) as BlogData[];
+    blogs.sort((a,b)=>b.date.seconds-a.date.seconds);
+    return blogs;
+  }
 
 export default function Blogs(){
+    const [blogs,setBlogs] = useState<BlogData[]>([]);
+
+    useEffect(()=>{
+        loadBlogs().then((data)=>setBlogs(data));
+    },[]);
+
     return <section id='blogs'>
         <div className="blog-title">
             <h2 className='blog-area-title'>I Write Here</h2>
@@ -16,28 +30,14 @@ export default function Blogs(){
     </section>
 }
 
-function BlogBox(
-    {blog}:
-    {
-        blog:{
-            title: string;
-            subtitle: string;
-            imageLink: string;
-            imageBgColor: string;
-            date: string;
-            link: string;
-            time:string;
-            tag:string;
-        }
-    }
-){
+function BlogBox({blog}:{blog:BlogData}){
     return <div className="blog-box">
         <div className="blog-img-holder" style={{backgroundColor:blog.imageBgColor}}>
             <img src={blog.imageLink} alt={blog.title} className='blog-img' loading='lazy'/>
             <div className="blog-tag" key={blog.tag}>{blog.tag}</div>
         </div>
         <div className="blog-content">
-            <h6 className="blog-content-date">{blog.date}</h6>
+            <h6 className="blog-content-date">{blog.date.toDate().toLocaleDateString('en-US',{year: 'numeric',month: 'short',day: 'numeric'})}</h6>
             <div style={{height:'4px'}}>&nbsp;</div>
             <h4 className="blog-content-title">{blog.title}</h4>
             <div style={{height:'10px'}}>&nbsp;</div>

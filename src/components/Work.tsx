@@ -1,8 +1,19 @@
 import './Work.css'
-import { projects } from '../assets/projects'
-import linkClick from './TrackedLink'
+import { useState, useEffect } from 'react'
+import { ProjectData } from '../custom-types';
+import { getData } from '../firebase';
+
+async function loadProjects(){
+    let projects = (await getData("projects")) as ProjectData[];
+    projects.sort((a,b)=>b.index-a.index);
+    return projects;
+}
 
 export default function Work(){
+    const [projects,setProjects] = useState<ProjectData[]>([]);
+    useEffect(()=>{
+        loadProjects().then((data)=>setProjects(data));
+    },[]);
     return <section id="work">
         <div className="blog-title">
             <h2 className='blog-area-title'>Top Projects</h2>
@@ -32,7 +43,7 @@ function WorkBox(
     return <div className='workbox'>
         <div className='work-image-holder'>
             {element.codeLink!=="In Progress"?
-                <a href={element.codeLink} onClick={(event)=>{event.preventDefault();linkClick({link:element.codeLink,isProfile:false});}} rel="noreferrer" className="git-link"><i className='bx bx-link-alt'></i></a>:
+                <a href={element.codeLink} rel="noreferrer" className="git-link"><i className='bx bx-link-alt'></i></a>:
                 <p className="in-progress">In Progress</p>}
             <img src={link} loading='lazy' alt={element.title} className='work-image'/>
             <p className="work-type">{element.type}</p>

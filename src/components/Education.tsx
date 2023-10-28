@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import './Education.css'
-import { education } from "../assets/education";
+import { getData } from '../firebase';
+import { EducationData } from '../custom-types';
+
+async function loadEducation(){
+    let education = (await getData("education")) as EducationData[];
+    education.sort((a,b)=>b.index-a.index);
+    return education;
+}
 
 export default function Education(){
-    
+    const [education,setEducation] = useState<EducationData[]>([]);
+
+    useEffect(()=>{
+        loadEducation().then((data)=>setEducation(data));
+    },[]);
     return <section id="education">        
         <div className="ed-area">
             {
@@ -12,17 +24,7 @@ export default function Education(){
     </section>
 }
 
-function EducationBox(
-    {ed}:
-    {
-        ed:{
-            degree: string;
-            uni: string;
-            fromto: string;
-            grade: string;
-        }
-    }
-){
+function EducationBox({ed}:{ed:EducationData}){
     return <div className="ed-box">
         <span className="vline"></span>
         <div className="ed-text">
