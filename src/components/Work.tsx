@@ -1,6 +1,6 @@
 import './Work.css'
 import { useState, useEffect } from 'react'
-import { ProjectData } from '../custom-types';
+import { ProjectData } from '../types';
 import { getData } from '../firebase';
 
 async function loadProjects(){

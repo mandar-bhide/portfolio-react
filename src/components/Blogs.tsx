@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BlogData } from '../custom-types';
+import { BlogData } from '../types';
 import './Blogs.css'
 import { getData } from '../firebase';
 

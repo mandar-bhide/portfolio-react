@@ -8,9 +8,8 @@ import Education from './components/Education';
 import { useEffect, useState } from 'react';
 import Footer from './components/Footer';
 import $ from 'jquery'
-import linkClick from './components/TrackedLink';
 import { getData } from './firebase';
-import { SocialData } from './custom-types';
+import { SocialData } from './types';
 
 async function loadSocial(){
   let social = (await getData("social")) as SocialData[];
@@ -53,7 +52,7 @@ function Social({data}:{data:SocialData[]}){
     <div style={{flex:1}}></div>
     {
       data?.map(function(el){        
-        return <a href={el.url} onClick={(event)=>{event.preventDefault();linkClick({link:el.url,isProfile:true,profileName:el.name});}} rel="noreferrer" key={el.name}>
+        return <a href={el.url} rel="noreferrer" key={el.name}>
           <i className={el.icon}></i>
         </a>
       })

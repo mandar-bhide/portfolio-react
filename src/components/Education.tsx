@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Education.css'
 import { getData } from '../firebase';
-import { EducationData } from '../custom-types';
+import { EducationData } from '../types';
 
 async function loadEducation(){
     let education = (await getData("education")) as EducationData[];

@@ -1,4 +1,4 @@
-import { QueryDocumentSnapshot, QuerySnapshot, Timestamp } from "firebase/firestore"
+import { QueryDocumentSnapshot, Timestamp } from "firebase/firestore"
 
 export class SocialData{
     name: string;

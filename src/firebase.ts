@@ -1,17 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
-import { BlogData, EducationData, ProjectData, SocialData } from "./custom-types";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCK6kDJ6sYaEMXHba-gzNRLJNHzhtYN0OU",
-    authDomain: "mandarbhide.firebaseapp.com",
-    projectId: "mandarbhide",
-    storageBucket: "mandarbhide.appspot.com",
-    messagingSenderId: "166674358367",
-    appId: "1:166674358367:web:6a85005ec89fc6c8ecfbea",
-    measurementId: "G-EZ4VW1SV4C"
-};
+import { BlogData, EducationData, ProjectData, SocialData } from "./types";
+import { firebaseConfig } from "./firebase-config";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)

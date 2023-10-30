@@ -1,6 +1,6 @@
 import me from '../assets/me.jpg'
 import './Intro.css'
-import { SocialData } from '../custom-types'
+import { SocialData } from '../types'
 import { useEffect, useState } from 'react'
 import { getResumeUrl } from '../firebase';
 
@@ -8,8 +8,7 @@ export default function Intro({data}:{data:SocialData[]}){
     const [resume,setResume] = useState("");
     useEffect(()=>{
         getResumeUrl().then((val)=>setResume(val));
-        console.log(resume);
-    },[])
+    },)
     return <section id="intro-1">
         <div className="column" style={{color:'var(--secondary-text-color)'}}>
             <div style={{marginBottom:'2em'}}>

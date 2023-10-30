@@ -1,6 +1,6 @@
 import './Footer.css'
 import { links } from '../assets/footerlinks'
-import { SocialData } from '../custom-types'
+import { SocialData } from '../types'
 
 export default function Footer({data}:{data:SocialData[]}){
     const contacts = [
