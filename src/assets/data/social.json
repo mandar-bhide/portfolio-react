@@ -1,0 +1,27 @@
+[
+    {
+      "name": "linkedin",
+      "icon": "social-icon bx bxl-linkedin-square",
+      "url": "https://www.linkedin.com/in/mandar-bhide/"
+    },
+    {
+      "name": "github",
+      "icon": "social-icon bx bxl-github",
+      "url": "https://www.github.com/mdb2301"
+    },
+    {
+      "name": "instagram",
+      "icon": "social-icon bx bxl-instagram",
+      "url": "https://www.instagram.com/mdb2301/"
+    },
+    {
+      "name": "medium",
+      "icon": "social-icon bx bxl-medium-square",
+      "url": "https://mandarbhide.medium.com/"
+    },
+    {
+      "name": "dribbble",
+      "icon": "social-icon bx bxl-dribbble",
+      "url": "https://dribbble.com/mdb2301"
+    }
+]

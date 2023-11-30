@@ -1,19 +1,8 @@
 import './Work.css'
-import { useState, useEffect } from 'react'
-import { ProjectData } from '../types';
-import { getData } from '../firebase';
-
-async function loadProjects(){
-    let projects = (await getData("projects")) as ProjectData[];
-    projects.sort((a,b)=>b.index-a.index);
-    return projects;
-}
+import projects from '../assets/data/projects.json'
+import { Project } from '../types'
 
 export default function Work(){
-    const [projects,setProjects] = useState<ProjectData[]>([]);
-    useEffect(()=>{
-        loadProjects().then((data)=>setProjects(data));
-    },[]);
     return <section id="work">
         <div className="blog-title">
             <h2 className='blog-area-title'>Top Projects</h2>
@@ -26,24 +15,12 @@ export default function Work(){
     </section>
 }
 
-function WorkBox(
-    {element}:
-    {
-        element:{
-            title: string;
-            image: string;
-            description: string;
-            technologies: string[];
-            codeLink: string;
-            type: string;
-        }
-    }
-){
+function WorkBox({element}:{element:Project}){
     const link = require("../assets/"+element.image)
     return <div className='workbox'>
         <div className='work-image-holder'>
             {element.codeLink!=="In Progress"?
-                <a href={element.codeLink} rel="noreferrer" className="git-link"><i className='bx bx-link-alt'></i></a>:
+                <a href={element.codeLink} target='_blank' rel="noreferrer" className="git-link"><i className='bx bx-link-alt'></i></a>:
                 <p className="in-progress">In Progress</p>}
             <img src={link} loading='lazy' alt={element.title} className='work-image'/>
             <p className="work-type">{element.type}</p>

@@ -1,14 +1,9 @@
 import me from '../assets/me.jpg'
+import { Social } from '../types'
 import './Intro.css'
-import { SocialData } from '../types'
-import { useEffect, useState } from 'react'
-import { getResumeUrl } from '../firebase';
 
-export default function Intro({data}:{data:SocialData[]}){
-    const [resume,setResume] = useState("");
-    useEffect(()=>{
-        getResumeUrl().then((val)=>setResume(val));
-    },)
+export default function Intro({data}:{data:Social[]}){
+    let resume = "https://docs.google.com/document/d/17T-h7vIGUiVggAmlmi22Ksw6JGvRNuX6pNKKH5iHBTs/export?format=pdf";
     return <section id="intro-1">
         <div className="column" style={{color:'var(--secondary-text-color)'}}>
             <div style={{marginBottom:'2em'}}>
@@ -23,7 +18,7 @@ export default function Intro({data}:{data:SocialData[]}){
                 }
                 </div>
                 <span style={{minHeight:'1em'}}>&nbsp;</span> <br/>
-                <span className='im'>Computer Engineer | CMA</span>
+                <span className='im'>Computer Engineer | CMA Finalist</span>
             </div>
             <div className='intro-buttons'>
                 <a href="#work" style={{marginTop:'1rem'}} className="read-all">Engineering Projects</a>

@@ -4,17 +4,12 @@ import Intro from './components/Intro';
 import TopBar from './components/TopBar'
 import Work from './components/Work';
 import Blogs from './components/Blogs';
-import Education from './components/Education';
+import EducationScreen from './components/Education';
 import { useEffect, useState } from 'react';
 import Footer from './components/Footer';
 import $ from 'jquery'
-import { getData } from './firebase';
-import { SocialData } from './types';
-
-async function loadSocial(){
-  let social = (await getData("social")) as SocialData[];
-  return social;
-}
+import social from './assets/data/social.json'
+import { Social } from './types';
 
 function App() {
   const [offset, setOffset] = useState(0);
@@ -24,13 +19,9 @@ function App() {
       window.addEventListener('scroll', onScroll)
       return () => window.removeEventListener('scroll', onScroll)
   }, []);
-  const [social, setSocial] = useState<SocialData[]>([]);
-  useEffect(()=>{
-    loadSocial().then((data)=>setSocial(data));
-  },[]);
   return (
     <div>
-      <TopBar/><Social data={social}/><Intro data={social}/><Education/><Skills/><Work/><Blogs/><Footer data={social}/>
+      <TopBar/><SocialScreen data={social}/><Intro data={social}/><EducationScreen/><Skills/><Work/><Blogs/><Footer data={social}/>
       {
         offset>80?<button style={{cursor:'pointer'}} onClick={()=>{
           setOffset(0)
@@ -43,7 +34,7 @@ function App() {
 
 export default App;
 
-function Social({data}:{data:SocialData[]}){
+function SocialScreen({data}:{data:Social[]}){
   return <div className='social'>
     <div className="square" style={{background:'var(--theme-blue)'}}>&nbsp;</div>
     <div className="square" style={{background:'var(--theme-green)'}}>&nbsp;</div>
@@ -51,8 +42,8 @@ function Social({data}:{data:SocialData[]}){
     <div className="square" style={{background:'var(--theme-red)'}}>&nbsp;</div>
     <div style={{flex:1}}></div>
     {
-      data?.map(function(el){        
-        return <a href={el.url} rel="noreferrer" key={el.name}>
+      data.map(function(el){        
+        return <a target='_blank' href={el.url} rel="noreferrer" key={el.name}>
           <i className={el.icon}></i>
         </a>
       })

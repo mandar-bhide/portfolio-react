@@ -1,0 +1,42 @@
+[
+    {
+      "title": "I Love Errors!",
+      "subtitle": "I just choose to avoid them…",
+      "imageLink": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*3niKiwzMUpZBqZKRATjApw.jpeg",
+      "imageBgColor": "#D3D5E1",
+      "date": "Jan 13, 2022",
+      "link": "https://mandarbhide.medium.com/i-love-errors-aad78673b39a",
+      "time": "4 min read",
+      "tag": "Debugging"
+    },
+    {
+      "title": "Built From Scratch",
+      "subtitle": "Server-side Framework",
+      "imageLink": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*HIxFbnlg7MnM0sh2JR7tEw.png",
+      "imageBgColor": "#D6D6D6",
+      "date": "Jul 25, 2022",
+      "link": "https://mandarbhide.medium.com/built-from-scratch-40479a6a6fa8",
+      "time": "3 min read",
+      "tag": "Dart server"
+    },
+    {
+      "title": "Getting Started with Google Flutter",
+      "subtitle": "Guide to the fastest growing framework",
+      "imageLink": "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*I-PjTMqS_ZDwylDj.png",
+      "imageBgColor": "#FFFFFF",
+      "date": "Jun 15, 2021",
+      "link": "https://mandarbhide.medium.com/getting-started-with-google-flutter-527feab12075",
+      "time": "4 min read",
+      "tag": "Flutter"
+    },
+    {
+      "title": "The Art of Coding",
+      "subtitle": "",
+      "imageLink": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*OKc5NAVz2SKmymOgeyMaQg.png",
+      "imageBgColor": "#000000",
+      "date": "Sep 11, 2020",
+      "link": "https://mandarbhide.medium.com/the-art-of-coding-5678252366bf",
+      "time": "3 min read",
+      "tag": "JavaScript"
+    }
+]
