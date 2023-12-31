@@ -45,8 +45,11 @@ export default function Footer({data}:{data:Social[]}){
                 })
             }
         </div>
+        <span style={{height:'5em'}}></span>
         <span className='made-with'>
-            Made with <i className='bx bxs-heart' style={{color:'red',marginInline:'7px'}}></i> in <i className='bx bxl-react' style={{color:'#61DBFB',marginLeft:'7px'}}></i>React
+            <div>Made with <i className='bx bxs-heart' style={{color:'red',marginInline:'2px'}}></i></div>
+            <span style={{height:'8px'}}></span>
+            <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>in <i className='bx bxl-react' style={{color:'#61DBFB',fontSize:'1.3em',marginInline:'1px'}}></i>+<i className='bx bxl-typescript' style={{color:'#007acc', fontSize:'1.3em',marginInline:'1px'}}></i> </div>
         </span>
     </section>
 }

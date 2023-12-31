@@ -3,10 +3,10 @@ import './Skills.css'
 export default function Skills(){
     var tech = [["System Programming","Mobile and Web"],["UI Design","Backend development"],["Cross-platform","AI/ML",]]
     var tools = [["Git/Github","Android Studio","Figma"],["Postman","MS Office","SAP-FICO"]]
-    var fin = [["Accounting","Taxation"],["Financial Management"],["Compliance","Audit"]]
+    var fin = [["Financial Accounting","Cost Accounting"],["Financial Management"],["Compliance","Audit"]]
     return <section id="skills">
         <SkillColumn title="Engineering" data={tech}/>
-        <SkillColumn title="CMA" data={fin}/>
+        <SkillColumn title="Accounting & Finance" data={fin}/>
         <SkillColumn title="Tools" data={tools}/>
     </section>
 }

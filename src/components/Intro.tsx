@@ -1,9 +1,10 @@
 import me from '../assets/me.jpg'
 import { Social } from '../types'
 import './Intro.css'
+import resume from '../assets/MandarBhide_Resume.pdf';
 
 export default function Intro({data}:{data:Social[]}){
-    let resume = "https://docs.google.com/document/d/17T-h7vIGUiVggAmlmi22Ksw6JGvRNuX6pNKKH5iHBTs/export?format=pdf";
+    let resume_direct = "https://docs.google.com/document/d/17T-h7vIGUiVggAmlmi22Ksw6JGvRNuX6pNKKH5iHBTs/export?format=pdf";
     return <section id="intro-1">
         <div className="column" style={{color:'var(--secondary-text-color)'}}>
             <div style={{marginBottom:'2em'}}>
