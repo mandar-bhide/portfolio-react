@@ -34,20 +34,20 @@
 .circle-active{
     width:10px;
     height:10px;
-    background-color: var(--primary-color);
+    background-color: var(--theme-green);
     animation: circle-glow 1300ms ease-in-out 0s infinite;
 }
 
 @keyframes circle-glow {
     0% {
-        box-shadow:0px 0px 16px 6px var(--primary-color);
+        box-shadow:0px 0px 16px 6px var(--theme-green);
         
     }
     50% {
-        box-shadow:0px 0px 8px 1px var(--primary-color);
+        box-shadow:0px 0px 8px 1px var(--theme-green);
     }
     100% {
-        box-shadow:0px 0px 16px 6px var(--primary-color);        
+        box-shadow:0px 0px 16px 6px var(--theme-green);        
     }
 }
 
