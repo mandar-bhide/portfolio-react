@@ -16,7 +16,7 @@ function EducationBox({ed}:{ed:Education}){
     return <div className="ed-box">    
         <h4 className="ed-degree">{ed.degree}</h4>
         <p className="ed-uni">{ed.uni}</p>
-        <p className="ed-fromto">{ed.fromto} &nbsp; {ed.grade=='N/A'?"":ed.grade}</p> 
+        <p className="ed-fromto">{ed.fromto} &nbsp; {ed.grade==='N/A'?"":ed.grade}</p> 
     </div>
 }
 

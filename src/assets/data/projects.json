@@ -1,5 +1,17 @@
 [
     {
+      "title": "Local fileserver",
+      "image": "fileserver.jpg",
+      "description": "File server to provide cloud storage facility over LAN",
+      "technologies": [
+        "Python",
+        "Dart"
+      ],
+      "codeLink": "https://github.com/mdb2301/local-fileserver",
+      "type": "Personal Project",
+      "index": 2
+    },
+    {
       "title": "Audit Challenge",
       "image": "audit.jpg",
       "description": "5th position in Grant Thornton audit challenge 2023",
