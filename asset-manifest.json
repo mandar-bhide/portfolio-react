@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio-react/static/css/main.28aab533.css",
+    "main.js": "/portfolio-react/static/js/main.8e004474.js",
+    "static/media/comex.png": "/portfolio-react/static/media/comex.86b7d63037e8c6ab169f.png",
+    "static/media/fileserver.jpg": "/portfolio-react/static/media/fileserver.78678f323e6918bfec4b.jpg",
+    "static/media/audit.jpg": "/portfolio-react/static/media/audit.f2a2c1aba4607f7705e9.jpg",
+    "static/media/stock.jpg": "/portfolio-react/static/media/stock.d7233708adf05cf55e66.jpg",
+    "static/media/screenshot.png": "/portfolio-react/static/media/screenshot.824c1f7e6e639924f932.png",
+    "static/media/MandarBhide_Resume.pdf": "/portfolio-react/static/media/MandarBhide_Resume.acf54551cc7362924402.pdf",
+    "static/media/me.jpg": "/portfolio-react/static/media/me.de0d8aff165e0014d26b.jpg",
+    "static/media/qdot.jpg": "/portfolio-react/static/media/qdot.9da487c297ea31f21184.jpg",
+    "static/media/ICMAI_Logo.png": "/portfolio-react/static/media/ICMAI_Logo.1d22871372fb75ecafb8.png",
+    "index.html": "/portfolio-react/index.html",
+    "static/media/tick.svg": "/portfolio-react/static/media/tick.a150221f54856afea03b227dff08c979.svg",
+    "main.28aab533.css.map": "/portfolio-react/static/css/main.28aab533.css.map",
+    "main.8e004474.js.map": "/portfolio-react/static/js/main.8e004474.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28aab533.css",
+    "static/js/main.8e004474.js"
+  ]
+}
